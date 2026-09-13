@@ -1,0 +1,48 @@
+From 9ce3f337baac2490b5daabcff4130f0a1781042a Mon Sep 17 00:00:00 2001
+From: Sriman Cherukuru <sriman.cherukuru@bectran.com>
+Date: Sun, 13 Sep 2026 13:41:56 -0500
+Subject: [PATCH 2/2] cpu/o3: fix infinite recursion in LSQ::lqFull/sqFull(tid)
+ under the Dynamic SMT sharing policy
+
+---
+ src/cpu/o3/lsq.cc | 15 +++++++++------
+ 1 file changed, 9 insertions(+), 6 deletions(-)
+
+diff --git a/src/cpu/o3/lsq.cc b/src/cpu/o3/lsq.cc
+index da04dc5931..35cd66ae8d 100644
+--- a/src/cpu/o3/lsq.cc
++++ b/src/cpu/o3/lsq.cc
+@@ -648,10 +648,13 @@ LSQ::lqFull()
+ bool
+ LSQ::lqFull(ThreadID tid)
+ {
+-    //@todo: Change to Calculate All Entries for
+-    //Dynamic Policy
++    // Fix (ILP assignment): with the Dynamic sharing policy this used to
++    // call lqFull(), which calls lqFull(tid) again -> infinite recursion
++    // and a crash as soon as the policy is selected.  A dynamically shared
++    // queue is full when the threads' combined occupancy reaches the total
++    // number of entries.
+     if (lsqPolicy == SMTQueuePolicy::Dynamic)
+-        return lqFull();
++        return numLoads() >= (int)LQEntries;
+     else
+         return thread[tid].lqFull();
+ }
+@@ -670,10 +673,10 @@ LSQ::sqFull()
+ bool
+ LSQ::sqFull(ThreadID tid)
+ {
+-     //@todo: Change to Calculate All Entries for
+-    //Dynamic Policy
++    // Fix (ILP assignment): see lqFull(tid) -- the original sqFull() call
++    // recursed forever (LSQ::sqFull -> sqFull(tid) -> sqFull ...).
+     if (lsqPolicy == SMTQueuePolicy::Dynamic)
+-        return sqFull();
++        return numStores() >= (int)SQEntries;
+     else
+         return thread[tid].sqFull();
+ }
+-- 
+2.39.5 (Apple Git-154)
+
