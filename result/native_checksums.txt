@@ -1,0 +1,7 @@
+int_alu: n=50000 checksum=da8cf086078afda2
+dep_chain: n=500000 checksum=cc679c89b22ae8b9
+fp_matmul: reps=4 checksum=287734899
+mem_stream: passes=2 checksum=8dd97a8432780000
+mem_chase: hops=300000 final=168928
+branchy: passes=20 checksum=0000a07e9043b778 hist=165100
+bsort: n=800 sorted=1 checksum=9facde812add0c98
