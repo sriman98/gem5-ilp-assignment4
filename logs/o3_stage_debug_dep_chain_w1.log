@@ -1,0 +1,319 @@
+3470000: system.cpu.fetch: Running stage.
+3470000: system.cpu.fetch: [tid:0] Attempting to fetch from
+3470000: system.cpu.fetch: [tid:0] Adding instructions to queue to decode.
+3470000: system.cpu.decoder: Decode: Decoded imul instruction: 
+{
+	leg = 0,
+	rex = 0x48,
+	vex/xop = 0,
+	op = {
+		type = one byte,
+		op = 0x6b,
+		},
+	modRM = 0xc0,
+	sib = 0,
+	immediate = 0xa,
+	displacement = 0
+	dispSize = 0}
+
+3470000: system.cpu.fetch: [tid:0] Instruction PC (0x1005262=>0x1005266).(0=>1) created [sn:3123].
+3470000: system.cpu.fetch: [tid:0] Instruction is:   IMUL_R_R_I : limm   t1, 0xa
+3470000: system.cpu.fetch: [tid:0] Fetch queue entry created (1/32).
+3470000: system.cpu.fetch: [tid:0] Done fetching, reached fetch bandwidth for this cycle.
+3470000: system.cpu.fetch: [tid:0] [sn:3123] Sending instruction to decode from fetch queue. Fetch queue size: 1.
+3470000: system.cpu.decode: Processing [tid:0]
+3470000: system.cpu.decode: [tid:0] Not blocked, so attempting to run stage.
+3470000: system.cpu.decode: [tid:0] Sending instruction to rename.
+3470000: system.cpu.decode: [tid:0] Processing instruction [sn:3122] with PC (0x100525c=>0x1005262).(2=>3)
+3470000: system.cpu.rename: Processing [tid:0]
+3470000: system.cpu.rename: [tid:0] Free IQ: 16, Free ROB: 28, Free LQ: 8, Free SQ: 8, FreeRM 31(213 208 255 510 31 2 
+3470000: system.cpu.rename: [tid:0] 3 instructions not yet in ROB
+3470000: system.cpu.rename: calcFreeLQEntries: free lqEntries: 8, loadsInProgress: 0, loads dispatchedToLQ: 0
+3470000: system.cpu.rename: [tid:0] Not blocked, so attempting to run stage.
+3470000: system.cpu.rename: [tid:0] 1 available instructions to send iew.
+3470000: system.cpu.rename: [tid:0] 3 insts pipelining from Rename | 1 insts dispatched to IQ last cycle.
+3470000: system.cpu.rename: [tid:0] Sending instructions to IEW.
+3470000: system.cpu.rename: [tid:0] Processing instruction [sn:3121] with PC (0x100525c=>0x1005262).(1=>2).
+3470000: global: Renamed reg t2 to physical reg 65 (65) old mapping was 43 (43)
+3470000: system.cpu.rename: [tid:0] Renaming arch reg 18 (integer) to physical reg 65 (65).
+3470000: system.cpu.rename: [tid:0] [sn:3121] Adding instruction to history buffer (size=11).
+3470000: system.cpu.rename: [tid:0] Removing a committed instruction from the history buffer 0 (size=11), until [sn:31
+3470000: system.cpu.rename: [tid:0] Freeing up older rename of reg 62 (integer), [sn:3115].
+3470000: system.cpu.iew: Issue: Processing [tid:0]
+3470000: system.cpu.iew: [tid:0] Not blocked, so attempting to run dispatch.
+3470000: system.cpu.iew: [tid:0] Issue: Adding PC (0x1005259=>0x100525c).(1=>2) [sn:3119] [tid:0] to IQ.
+3470000: system.cpu.iew: Execute: Executing instructions from IQ.
+3470000: system.cpu.iew: Execute: Processing PC (0x1005259=>0x100525c).(0=>1), [tid:0] [sn:3118].
+3470000: global: RegFile: Access to int register 67, has data 0x1005259
+3470000: global: RegFile: Setting int register 97 to 0x1005209
+3470000: system.cpu.iew: Current wb cycle: 0, width: 1, numInst: 0
+wbActual:0
+3470000: system.cpu.iew: Sending instructions to commit, [sn:3118] PC (0x1005259=>0x100525c).(0=>1).
+3470000: system.cpu.iew: Setting Destination Register 97 (integer)
+3470000: system.cpu.iew: Processing [tid:0]
+3470000: system.cpu.iew: [tid:0], Dispatch dispatched 1 instructions.
+3470000: system.cpu.iew: IQ has 16 free entries (Can schedule: 0).  LQ has 8 free entries. SQ has 8 free entries.
+3470000: system.cpu.commit: Getting instructions from Rename stage.
+3470000: system.cpu.commit: [tid:0] [sn:3120] Inserting PC (0x100525c=>0x1005262).(0=>1) into ROB.
+3470000: system.cpu.commit: Trying to commit instructions in the ROB.
+3470000: system.cpu.commit: Trying to commit head instruction, [tid:0] [sn:3116]
+3470000: system.cpu.commit: [tid:0] [sn:3116] Committing instruction with PC (0x1005253=>0x1005259).(1=>2)
+3470000: system.cpu.commit: [tid:0] Marking PC (0x1005253=>0x1005259).(2=>3), [sn:3117] ready within ROB.
+3470000: system.cpu.commit: [tid:0] Instruction [sn:3117] PC (0x1005253=>0x1005259).(2=>3) is head of ROB and ready to
+3470000: system.cpu.commit: [tid:0] ROB has 4 insts & 28 free entries.
+3470500: system.cpu.fetch: Running stage.
+3470500: system.cpu.fetch: [tid:0] Attempting to fetch from
+3470500: system.cpu.fetch: [tid:0] Adding instructions to queue to decode.
+3470500: system.cpu.fetch: [tid:0] Instruction PC (0x1005262=>0x1005266).(1=>2) created [sn:3124].
+3470500: system.cpu.fetch: [tid:0] Instruction is:   IMUL_R_R_I : mul1s   rax, t1
+3470500: system.cpu.fetch: [tid:0] Fetch queue entry created (1/32).
+3470500: system.cpu.fetch: [tid:0] Done fetching, reached fetch bandwidth for this cycle.
+3470500: system.cpu.fetch: [tid:0] [sn:3124] Sending instruction to decode from fetch queue. Fetch queue size: 1.
+3470500: system.cpu.decode: Processing [tid:0]
+3470500: system.cpu.decode: [tid:0] Not blocked, so attempting to run stage.
+3470500: system.cpu.decode: [tid:0] Sending instruction to rename.
+3470500: system.cpu.decode: [tid:0] Processing instruction [sn:3123] with PC (0x1005262=>0x1005266).(0=>1)
+3470500: system.cpu.rename: Processing [tid:0]
+3470500: system.cpu.rename: [tid:0] Free IQ: 16, Free ROB: 28, Free LQ: 8, Free SQ: 8, FreeRM 31(213 208 255 510 31 2 
+3470500: system.cpu.rename: [tid:0] 3 instructions not yet in ROB
+3470500: system.cpu.rename: calcFreeLQEntries: free lqEntries: 8, loadsInProgress: 0, loads dispatchedToLQ: 0
+3470500: system.cpu.rename: [tid:0] Not blocked, so attempting to run stage.
+3470500: system.cpu.rename: [tid:0] 1 available instructions to send iew.
+3470500: system.cpu.rename: [tid:0] 3 insts pipelining from Rename | 1 insts dispatched to IQ last cycle.
+3470500: system.cpu.rename: [tid:0] Sending instructions to IEW.
+3470500: system.cpu.rename: [tid:0] Processing instruction [sn:3122] with PC (0x100525c=>0x1005262).(2=>3).
+3470500: system.cpu.rename: [tid:0] Looking up integer arch reg 17, got phys reg 11 (integer)
+3470500: system.cpu.rename: [tid:0] Register 11 (flat: 11) (integer) is not ready.
+3470500: system.cpu.rename: [tid:0] Looking up integer arch reg 18, got phys reg 65 (integer)
+3470500: system.cpu.rename: [tid:0] Register 65 (flat: 65) (integer) is not ready.
+3470500: system.cpu.rename: [tid:0] Looking up condition_code arch reg 0, got phys reg 943 (condition_code)
+3470500: system.cpu.rename: [tid:0] Register 943 (flat: 2257) (condition_code) is not ready.
+3470500: system.cpu.rename: [tid:0] Looking up condition_code arch reg 1, got phys reg 944 (condition_code)
+3470500: system.cpu.rename: [tid:0] Register 944 (flat: 2258) (condition_code) is not ready.
+3470500: system.cpu.rename: [tid:0] Looking up condition_code arch reg 2, got phys reg 2 (condition_code)
+3470500: system.cpu.rename: [tid:0] Register 2 (flat: 1316) (condition_code) is ready.
+3470500: system.cpu.rename: [tid:0] Looking up condition_code arch reg 3, got phys reg 3 (condition_code)
+3470500: system.cpu.rename: [tid:0] Register 3 (flat: 1317) (condition_code) is ready.
+3470500: system.cpu.rename: [tid:0] Looking up condition_code arch reg 4, got phys reg 4 (condition_code)
+3470500: system.cpu.rename: [tid:0] Register 4 (flat: 1318) (condition_code) is ready.
+3470500: system.cpu.rename: [tid:0] Looking up miscellaneous arch reg 153, got phys reg 153 (miscellaneous)
+3470500: system.cpu.rename: [tid:0] Register 153 (flat: 2747) (miscellaneous) is ready.
+3470500: system.cpu.rename: [tid:0] Removing a committed instruction from the history buffer 0 (size=10), until [sn:31
+3470500: system.cpu.rename: [tid:0] Freeing up older rename of reg 53 (integer), [sn:3116].
+3470500: system.cpu.iew: Issue: Processing [tid:0]
+3470500: system.cpu.iew: [tid:0] Not blocked, so attempting to run dispatch.
+3470500: system.cpu.iew: [tid:0] Issue: Adding PC (0x100525c=>0x1005262).(0=>1) [sn:3120] [tid:0] to IQ.
+3470500: system.cpu.iew: Execute: Executing instructions from IQ.
+3470500: system.cpu.iew: Execute: Processing PC (0x1005259=>0x100525c).(1=>2), [tid:0] [sn:3119].
+3470500: global: RegFile: Access to int register 184, has data 0x1
+3470500: global: RegFile: Access to int register 97, has data 0x1005209
+3470500: global: RegFile: Setting cc register 943 to 0x90
+3470500: global: RegFile: Setting cc register 944 to 0x1
+3470500: system.cpu.iew: Current wb cycle: 0, width: 1, numInst: 0
+wbActual:0
+3470500: system.cpu.iew: Sending instructions to commit, [sn:3119] PC (0x1005259=>0x100525c).(1=>2).
+3470500: system.cpu.iew: Setting Destination Register 65535 (invalid)
+3470500: system.cpu.iew: Setting Destination Register 943 (condition_code)
+3470500: system.cpu.iew: Setting Destination Register 944 (condition_code)
+3470500: system.cpu.iew: Setting Destination Register 65535 (invalid)
+3470500: system.cpu.iew: Setting Destination Register 65535 (invalid)
+3470500: system.cpu.iew: Setting Destination Register 65535 (invalid)
+3470500: system.cpu.iew: Processing [tid:0]
+3470500: system.cpu.iew: [tid:0], Dispatch dispatched 1 instructions.
+3470500: system.cpu.iew: IQ has 16 free entries (Can schedule: 0).  LQ has 8 free entries. SQ has 8 free entries.
+3470500: system.cpu.commit: Getting instructions from Rename stage.
+3470500: system.cpu.commit: [tid:0] [sn:3121] Inserting PC (0x100525c=>0x1005262).(1=>2) into ROB.
+3470500: system.cpu.commit: Trying to commit instructions in the ROB.
+3470500: system.cpu.commit: Trying to commit head instruction, [tid:0] [sn:3117]
+3470500: system.cpu.commit: [tid:0] [sn:3117] Committing instruction with PC (0x1005253=>0x1005259).(2=>3)
+3470500: system.cpu.commit: [tid:0] Marking PC (0x1005259=>0x100525c).(0=>1), [sn:3118] ready within ROB.
+3470500: system.cpu.commit: [tid:0] Instruction [sn:3118] PC (0x1005259=>0x100525c).(0=>1) is head of ROB and ready to
+3470500: system.cpu.commit: [tid:0] ROB has 4 insts & 28 free entries.
+3471000: system.cpu.fetch: Running stage.
+3471000: system.cpu.fetch: [tid:0] Attempting to fetch from
+3471000: system.cpu.fetch: [tid:0] Adding instructions to queue to decode.
+3471000: system.cpu.fetch: [tid:0] Instruction PC (0x1005262=>0x1005266).(2=>3) created [sn:3125].
+3471000: system.cpu.fetch: [tid:0] Instruction is:   IMUL_R_R_I : mulel   rax, rax
+3471000: system.cpu.fetch: [tid:0] Fetch queue entry created (1/32).
+3471000: system.cpu.fetch: [tid:0] Done fetching, reached fetch bandwidth for this cycle.
+3471000: system.cpu.fetch: [tid:0] [sn:3125] Sending instruction to decode from fetch queue. Fetch queue size: 1.
+3471000: system.cpu.decode: Processing [tid:0]
+3471000: system.cpu.decode: [tid:0] Not blocked, so attempting to run stage.
+3471000: system.cpu.decode: [tid:0] Sending instruction to rename.
+3471000: system.cpu.decode: [tid:0] Processing instruction [sn:3124] with PC (0x1005262=>0x1005266).(1=>2)
+3471000: system.cpu.rename: Processing [tid:0]
+3471000: system.cpu.rename: [tid:0] Free IQ: 16, Free ROB: 28, Free LQ: 8, Free SQ: 8, FreeRM 31(214 208 255 510 31 2 
+3471000: system.cpu.rename: [tid:0] 3 instructions not yet in ROB
+3471000: system.cpu.rename: calcFreeLQEntries: free lqEntries: 8, loadsInProgress: 0, loads dispatchedToLQ: 0
+3471000: system.cpu.rename: [tid:0] Not blocked, so attempting to run stage.
+3471000: system.cpu.rename: [tid:0] 1 available instructions to send iew.
+3471000: system.cpu.rename: [tid:0] 3 insts pipelining from Rename | 1 insts dispatched to IQ last cycle.
+3471000: system.cpu.rename: [tid:0] Sending instructions to IEW.
+3471000: system.cpu.rename: [tid:0] Processing instruction [sn:3123] with PC (0x1005262=>0x1005266).(0=>1).
+3471000: global: Renamed reg t1 to physical reg 54 (54) old mapping was 11 (11)
+3471000: system.cpu.rename: [tid:0] Renaming arch reg 17 (integer) to physical reg 54 (54).
+3471000: system.cpu.rename: [tid:0] [sn:3123] Adding instruction to history buffer (size=10).
+3471000: system.cpu.rename: [tid:0] Removing a committed instruction from the history buffer 0 (size=10), until [sn:31
+3471000: system.cpu.rename: [tid:0] [sn:3117] Old sequence number encountered. Ensure that a syscall happened recently
+3471000: system.cpu.iew: Issue: Processing [tid:0]
+3471000: system.cpu.iew: [tid:0] Not blocked, so attempting to run dispatch.
+3471000: system.cpu.iew: [tid:0] Issue: Adding PC (0x100525c=>0x1005262).(1=>2) [sn:3121] [tid:0] to IQ.
+3471000: system.cpu.iew: Execute: Executing instructions from IQ.
+3471000: system.cpu.iew: Execute: Processing PC (0x100525c=>0x1005262).(0=>1), [tid:0] [sn:3120].
+3471000: global: RegFile: Setting int register 11 to 0x1005262
+3471000: system.cpu.iew: Current wb cycle: 0, width: 1, numInst: 0
+wbActual:0
+3471000: system.cpu.iew: Sending instructions to commit, [sn:3120] PC (0x100525c=>0x1005262).(0=>1).
+3471000: system.cpu.iew: Setting Destination Register 11 (integer)
+3471000: system.cpu.iew: Processing [tid:0]
+3471000: system.cpu.iew: [tid:0], Dispatch dispatched 1 instructions.
+3471000: system.cpu.iew: IQ has 16 free entries (Can schedule: 0).  LQ has 8 free entries. SQ has 8 free entries.
+3471000: system.cpu.commit: Getting instructions from Rename stage.
+3471000: system.cpu.commit: [tid:0] [sn:3122] Inserting PC (0x100525c=>0x1005262).(2=>3) into ROB.
+3471000: system.cpu.commit: Trying to commit instructions in the ROB.
+3471000: system.cpu.commit: Trying to commit head instruction, [tid:0] [sn:3118]
+3471000: system.cpu.commit: [tid:0] [sn:3118] Committing instruction with PC (0x1005259=>0x100525c).(0=>1)
+3471000: system.cpu.commit: [tid:0] Marking PC (0x1005259=>0x100525c).(1=>2), [sn:3119] ready within ROB.
+3471000: system.cpu.commit: [tid:0] Instruction [sn:3119] PC (0x1005259=>0x100525c).(1=>2) is head of ROB and ready to
+3471000: system.cpu.commit: [tid:0] ROB has 4 insts & 28 free entries.
+3471500: system.cpu.fetch: Running stage.
+3471500: system.cpu.fetch: [tid:0] Attempting to fetch from
+3471500: system.cpu.fetch: [tid:0] Adding instructions to queue to decode.
+3471500: system.cpu.fetch: [tid:0] Instruction PC (0x1005262=>0x1005266).(3=>4) created [sn:3126].
+3471500: system.cpu.fetch: [tid:0] Instruction is:   IMUL_R_R_I : muleh   t0, t0
+3471500: system.cpu.fetch: [tid:0] Fetch queue entry created (1/32).
+3471500: system.cpu.fetch: [tid:0] Done fetching, reached fetch bandwidth for this cycle.
+3471500: system.cpu.fetch: [tid:0] [sn:3126] Sending instruction to decode from fetch queue. Fetch queue size: 1.
+3471500: system.cpu.decode: Processing [tid:0]
+3471500: system.cpu.decode: [tid:0] Not blocked, so attempting to run stage.
+3471500: system.cpu.decode: [tid:0] Sending instruction to rename.
+3471500: system.cpu.decode: [tid:0] Processing instruction [sn:3125] with PC (0x1005262=>0x1005266).(2=>3)
+3471500: system.cpu.rename: Processing [tid:0]
+3471500: system.cpu.rename: [tid:0] Free IQ: 16, Free ROB: 28, Free LQ: 8, Free SQ: 8, FreeRM 31(213 208 255 510 31 2 
+3471500: system.cpu.rename: [tid:0] 3 instructions not yet in ROB
+3471500: system.cpu.rename: calcFreeLQEntries: free lqEntries: 8, loadsInProgress: 0, loads dispatchedToLQ: 0
+3471500: system.cpu.rename: [tid:0] Not blocked, so attempting to run stage.
+3471500: system.cpu.rename: [tid:0] 1 available instructions to send iew.
+3471500: system.cpu.rename: [tid:0] 3 insts pipelining from Rename | 1 insts dispatched to IQ last cycle.
+3471500: system.cpu.rename: [tid:0] Sending instructions to IEW.
+3471500: system.cpu.rename: [tid:0] Processing instruction [sn:3124] with PC (0x1005262=>0x1005266).(1=>2).
+3471500: system.cpu.rename: [tid:0] Looking up integer arch reg 0, got phys reg 68 (integer)
+3471500: system.cpu.rename: [tid:0] Register 68 (flat: 68) (integer) is ready.
+3471500: system.cpu.rename: [tid:0] Looking up integer arch reg 17, got phys reg 54 (integer)
+3471500: system.cpu.rename: [tid:0] Register 54 (flat: 54) (integer) is not ready.
+3471500: system.cpu.rename: [tid:0] Looking up integer arch reg 33, got phys reg 33 (integer)
+3471500: system.cpu.rename: [tid:0] Register 33 (flat: 33) (integer) is ready.
+3471500: system.cpu.rename: [tid:0] Looking up integer arch reg 34, got phys reg 34 (integer)
+3471500: system.cpu.rename: [tid:0] Register 34 (flat: 34) (integer) is ready.
+3471500: system.cpu.rename: [tid:0] Looking up invalid arch reg 0, got phys reg 65535 (invalid)
+3471500: system.cpu.rename: [tid:0] Register 65535 (flat: 65535) (invalid) is ready.
+3471500: system.cpu.rename: [tid:0] Looking up invalid arch reg 0, got phys reg 65535 (invalid)
+3471500: system.cpu.rename: [tid:0] Register 65535 (flat: 65535) (invalid) is ready.
+3471500: global: Renamed reg t17 to physical reg 15 (15) old mapping was 33 (33)
+3471500: system.cpu.rename: [tid:0] Renaming arch reg 33 (integer) to physical reg 15 (15).
+3471500: system.cpu.rename: [tid:0] [sn:3124] Adding instruction to history buffer (size=11).
+3471500: global: Renamed reg t18 to physical reg 100 (100) old mapping was 34 (34)
+3471500: system.cpu.rename: [tid:0] Renaming arch reg 34 (integer) to physical reg 100 (100).
+3471500: system.cpu.rename: [tid:0] [sn:3124] Adding instruction to history buffer (size=12).
+3471500: global: Renamed reg condition_code[1] to physical reg 2259 (2259) old mapping was 2258 (2258)
+3471500: system.cpu.rename: [tid:0] Renaming arch reg 1 (condition_code) to physical reg 945 (2259).
+3471500: system.cpu.rename: [tid:0] [sn:3124] Adding instruction to history buffer (size=13).
+3471500: system.cpu.rename: [tid:0] Renaming arch reg 0 (invalid) to physical reg 65535 (65535).
+3471500: system.cpu.rename: [tid:0] [sn:3124] Adding instruction to history buffer (size=14).
+3471500: system.cpu.rename: [tid:0] Removing a committed instruction from the history buffer 0 (size=14), until [sn:31
+3471500: system.cpu.rename: [tid:0] Freeing up older rename of reg 67 (integer), [sn:3118].
+3471500: system.cpu.iew: Issue: Processing [tid:0]
+3471500: system.cpu.iew: [tid:0] Not blocked, so attempting to run dispatch.
+3471500: system.cpu.iew: [tid:0] Issue: Adding PC (0x100525c=>0x1005262).(2=>3) [sn:3122] [tid:0] to IQ.
+3471500: system.cpu.iew: Execute: Executing instructions from IQ.
+3471500: system.cpu.iew: Execute: Processing PC (0x100525c=>0x1005262).(1=>2), [tid:0] [sn:3121].
+3471500: global: RegFile: Setting int register 65 to 0xa8
+3471500: system.cpu.iew: Current wb cycle: 0, width: 1, numInst: 0
+wbActual:0
+3471500: system.cpu.iew: Sending instructions to commit, [sn:3121] PC (0x100525c=>0x1005262).(1=>2).
+3471500: system.cpu.iew: Setting Destination Register 65 (integer)
+3471500: system.cpu.iew: Processing [tid:0]
+3471500: system.cpu.iew: [tid:0], Dispatch dispatched 1 instructions.
+3471500: system.cpu.iew: IQ has 16 free entries (Can schedule: 0).  LQ has 8 free entries. SQ has 8 free entries.
+3471500: system.cpu.commit: Getting instructions from Rename stage.
+3471500: system.cpu.commit: [tid:0] [sn:3123] Inserting PC (0x1005262=>0x1005266).(0=>1) into ROB.
+3471500: system.cpu.commit: Trying to commit instructions in the ROB.
+3471500: system.cpu.commit: Trying to commit head instruction, [tid:0] [sn:3119]
+3471500: system.cpu.commit: [tid:0] [sn:3119] Committing instruction with PC (0x1005259=>0x100525c).(1=>2)
+3471500: system.cpu.commit: [tid:0] Marking PC (0x100525c=>0x1005262).(0=>1), [sn:3120] ready within ROB.
+3471500: system.cpu.commit: [tid:0] Instruction [sn:3120] PC (0x100525c=>0x1005262).(0=>1) is head of ROB and ready to
+3471500: system.cpu.commit: [tid:0] ROB has 4 insts & 28 free entries.
+3472000: system.cpu.fetch: Running stage.
+3472000: system.cpu.fetch: [tid:0] Attempting to fetch from
+3472000: system.cpu.fetch: [tid:0] Adding instructions to queue to decode.
+3472000: system.cpu.decoder: Decode: Decoded seto instruction: 
+{
+	leg = 0,
+	rex = 0,
+	vex/xop = 0,
+	op = {
+		type = two byte,
+		op = 0x90,
+		},
+	modRM = 0xc2,
+	sib = 0,
+	immediate = 0,
+	displacement = 0
+	dispSize = 0}
+
+3472000: system.cpu.fetch: [tid:0] Instruction PC (0x1005266=>0x1005269).(0=>1) created [sn:3127].
+3472000: system.cpu.fetch: [tid:0] Instruction is:   SETO_R : movi   dl, dl, 0x1
+3472000: system.cpu.fetch: [tid:0] Fetch queue entry created (1/32).
+3472000: system.cpu.fetch: [tid:0] Done fetching, reached fetch bandwidth for this cycle.
+3472000: system.cpu.fetch: [tid:0] [sn:3127] Sending instruction to decode from fetch queue. Fetch queue size: 1.
+3472000: system.cpu.decode: Processing [tid:0]
+3472000: system.cpu.decode: [tid:0] Not blocked, so attempting to run stage.
+3472000: system.cpu.decode: [tid:0] Sending instruction to rename.
+3472000: system.cpu.decode: [tid:0] Processing instruction [sn:3126] with PC (0x1005262=>0x1005266).(3=>4)
+3472000: system.cpu.rename: Processing [tid:0]
+3472000: system.cpu.rename: [tid:0] Free IQ: 16, Free ROB: 28, Free LQ: 8, Free SQ: 8, FreeRM 31(212 208 255 510 31 2 
+3472000: system.cpu.rename: [tid:0] 3 instructions not yet in ROB
+3472000: system.cpu.rename: calcFreeLQEntries: free lqEntries: 8, loadsInProgress: 0, loads dispatchedToLQ: 0
+3472000: system.cpu.rename: [tid:0] Not blocked, so attempting to run stage.
+3472000: system.cpu.rename: [tid:0] 1 available instructions to send iew.
+3472000: system.cpu.rename: [tid:0] 3 insts pipelining from Rename | 1 insts dispatched to IQ last cycle.
+3472000: system.cpu.rename: [tid:0] Sending instructions to IEW.
+3472000: system.cpu.rename: [tid:0] Processing instruction [sn:3125] with PC (0x1005262=>0x1005266).(2=>3).
+3472000: system.cpu.rename: [tid:0] Looking up integer arch reg 33, got phys reg 15 (integer)
+3472000: system.cpu.rename: [tid:0] Register 15 (flat: 15) (integer) is not ready.
+3472000: global: Renamed reg rax to physical reg 115 (115) old mapping was 68 (68)
+3472000: system.cpu.rename: [tid:0] Renaming arch reg 0 (integer) to physical reg 115 (115).
+3472000: system.cpu.rename: [tid:0] [sn:3125] Adding instruction to history buffer (size=14).
+3472000: system.cpu.rename: [tid:0] Removing a committed instruction from the history buffer 0 (size=14), until [sn:31
+3472000: system.cpu.rename: [tid:0] Freeing up older rename of reg 65535 (invalid), [sn:3119].
+3472000: system.cpu.rename: [tid:0] Freeing up older rename of reg 941 (condition_code), [sn:3119].
+3472000: system.cpu.rename: [tid:0] Freeing up older rename of reg 942 (condition_code), [sn:3119].
+3472000: system.cpu.rename: [tid:0] Freeing up older rename of reg 65535 (invalid), [sn:3119].
+3472000: system.cpu.rename: [tid:0] Freeing up older rename of reg 65535 (invalid), [sn:3119].
+3472000: system.cpu.rename: [tid:0] Freeing up older rename of reg 65535 (invalid), [sn:3119].
+3472000: system.cpu.iew: Issue: Processing [tid:0]
+3472000: system.cpu.iew: [tid:0] Not blocked, so attempting to run dispatch.
+3472000: system.cpu.iew: [tid:0] Issue: Adding PC (0x1005262=>0x1005266).(0=>1) [sn:3123] [tid:0] to IQ.
+3472000: system.cpu.iew: Execute: Executing instructions from IQ.
+3472000: system.cpu.iew: Execute: Processing PC (0x100525c=>0x1005262).(2=>3), [tid:0] [sn:3122].
+3472000: global: RegFile: Access to int register 11, has data 0x1005262
+3472000: global: RegFile: Access to int register 65, has data 0xa8
+3472000: global: RegFile: Access to cc register 943 has data 0x90
+3472000: global: RegFile: Access to cc register 944 has data 0x1
+3472000: global: RegFile: Access to cc register 2 has data 0
+3472000: global: RegFile: Access to cc register 3 has data 0
+3472000: global: RegFile: Access to cc register 4 has data 0
+3472000: system.cpu.iew: Current wb cycle: 0, width: 1, numInst: 0
+wbActual:0
+3472000: system.cpu.iew: Sending instructions to commit, [sn:3122] PC (0x100525c=>0x1005262).(2=>3).
+3472000: system.cpu.iew: Processing [tid:0]
+3472000: system.cpu.iew: [tid:0], Dispatch dispatched 1 instructions.
+3472000: system.cpu.iew: IQ has 16 free entries (Can schedule: 0).  LQ has 8 free entries. SQ has 8 free entries.
+3472000: system.cpu.commit: Getting instructions from Rename stage.
+3472000: system.cpu.commit: [tid:0] [sn:3124] Inserting PC (0x1005262=>0x1005266).(1=>2) into ROB.
+3472000: system.cpu.commit: Trying to commit instructions in the ROB.
+3472000: system.cpu.commit: Trying to commit head instruction, [tid:0] [sn:3120]
+3472000: system.cpu.commit: [tid:0] [sn:3120] Committing instruction with PC (0x100525c=>0x1005262).(0=>1)
+3472000: system.cpu.commit: [tid:0] Marking PC (0x100525c=>0x1005262).(1=>2), [sn:3121] ready within ROB.
+3472000: system.cpu.commit: [tid:0] Instruction [sn:3121] PC (0x100525c=>0x1005262).(1=>2) is head of ROB and ready to
+3472000: system.cpu.commit: [tid:0] ROB has 4 insts & 28 free entries.
