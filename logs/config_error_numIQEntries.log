@@ -1,0 +1,17 @@
+AttributeError: Invalid assignment for Class X86O3CPU with parameter numIQEntries
+
+At:
+  src/python/m5/SimObject.py(934): __setattr__
+  configs/ilp_config.py(127): make_o3
+  configs/ilp_config.py(171): <module>
+  src/python/m5/main.py(687): main
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.1
+gem5 compiled Sep 13 2026 13:17:59
+gem5 started Sep 13 2026 13:20:42
+gem5 executing on Sriman-macbook.local, pid 52395
+command line: /Users/srimancherukuru/git/gem5/build/X86/gem5.opt --outdir=/private/tmp/claude-501/-Users-srimancherukuru-Documents-BectranWorkSpace/93be3428-3876-46bd-9c28-435fc16ac7db/scratchpad/t1 configs/ilp_config.py --cpu o3 --width 4 --cmd bin/int_alu:2000
+
+info: Standard input is not a terminal, disabling listeners.

@@ -1,0 +1,61 @@
+Global frequency set at 1000000000000 ticks per second
+warn: No dot file generated. Please install pydot to generate the dot file and pdf.
+src/mem/dram_interface.cc:692: warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (1024 Mbytes)
+src/arch/x86/linux/se_workload.cc:76: warn: Unknown operating system; assuming Linux.
+src/base/statistics.hh:279: warn: One of the stats is a legacy stat. Legacy stat is a stat that does not belong to any statistics::Group. Legacy stat is deprecated.
+src/base/stats/storage.hh:281: warn: Bucket size (4) does not divide range [1:32] into equal-sized buckets. Rounding up.
+src/base/stats/storage.hh:281: warn: Bucket size (4) does not divide range [1:8] into equal-sized buckets. Rounding up.
+src/base/remote_gdb.cc:418: warn: Sockets disabled, not accepting gdb connections
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.1
+gem5 compiled Sep 13 2026 13:17:59
+gem5 started Sep 13 2026 13:23:55
+gem5 executing on Sriman-macbook.local, pid 53768
+command line: /Users/srimancherukuru/git/gem5/build/X86/gem5.opt --outdir=/private/tmp/claude-501/-Users-srimancherukuru-Documents-BectranWorkSpace/93be3428-3876-46bd-9c28-435fc16ac7db/scratchpad/fp_w4_tour configs/ilp_config.py --cpu o3 --width 4 --cmd bin/fp_matmul:1
+
+info: Standard input is not a terminal, disabling listeners.
+[ilp_config] cpu=o3 width=4 bp=tournament threads=1 cmds=['bin/fp_matmul:1']
+src/sim/mem_state.cc:443: info: Increasing stack size by one page.
+src/sim/mem_state.cc:443: info: Increasing stack size by one page.
+build/X86/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
+build/X86/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fimul' unimplemented
+build/X86/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fimul' unimplemented
+src/arch/x86/faults.cc:169: panic: Tried to write unmapped address 0x7ffffffff000.
+PC: (0x10036b7=>0x10036ba).(0=>1), Instr:   MOV_M_R : st   eax, DS:[r9]
+Memory Usage: 437402416 KBytes
+Program aborted at tick 490386500
+--- BEGIN LIBC BACKTRACE ---
+0   gem5.opt                            0x0000000100d8ac04 _ZN4gem515print_backtraceEv + 44
+1   gem5.opt                            0x0000000100d9e690 _ZN4gem512abortHandlerEi + 132
+2   libsystem_platform.dylib            0x0000000189e097a4 _sigtramp + 56
+3   libsystem_pthread.dylib             0x0000000189dff8d8 pthread_kill + 296
+4   libsystem_c.dylib                   0x0000000189d06790 abort + 148
+5   gem5.opt                            0x0000000100114f00 _ZN4gem55linux8onUDelayEPNS_13ThreadContextEyyy + 0
+6   gem5.opt                            0x000000010051dd40 _ZZN4gem56X86ISA9PageFault6invokeEPNS_13ThreadContextERKNS_14RefCountingPtrINS_10StaticInstEEEENK3$_0clIJA34_cPKcyEEEDaDpRKT_ + 0
+7   gem5.opt                            0x00000001003d4e40 _ZN4gem52o36Commit10commitHeadERKNS_14RefCountingPtrINS0_7DynInstEEEj + 1332
+8   gem5.opt                            0x00000001003d3ad8 _ZN4gem52o36Commit11commitInstsEv + 592
+9   gem5.opt                            0x00000001003d21d4 _ZN4gem52o36Commit6commitEv + 2380
+10  gem5.opt                            0x00000001003d14bc _ZN4gem52o36Commit4tickEv + 424
+11  gem5.opt                            0x00000001003dafb4 _ZN4gem52o33CPU4tickEv + 160
+12  gem5.opt                            0x0000000100d97060 _ZN4gem510EventQueue10serviceOneEv + 244
+13  gem5.opt                            0x0000000100db1800 _ZN4gem59doSimLoopEPNS_10EventQueueE + 320
+14  gem5.opt                            0x0000000100db1130 _ZN4gem58simulateEy + 376
+15  gem5.opt                            0x00000001001a4634 _ZZN8pybind1112cpp_function10initializeIRPFPN4gem522GlobalSimLoopExitEventEyES4_JyEJNS_4nameENS_5scopeENS_7siblingENS_5arg_vEEEEvOT_PFT0_DpT1_EDpRKT2_ENKUlRNS_6detail13function_callEE_clESP_ + 88
+16  gem5.opt                            0x00000001001a45d0 _ZZN8pybind1112cpp_function10initializeIRPFPN4gem522GlobalSimLoopExitEventEyES4_JyEJNS_4nameENS_5scopeENS_7siblingENS_5arg_vEEEEvOT_PFT0_DpT1_EDpRKT2_ENUlRNS_6detail13function_callEE_8__invokeESP_ + 24
+17  gem5.opt                            0x0000000100138998 _ZN8pybind1112cpp_function10dispatcherEP7_objectS2_S2_ + 5104
+18  Python                              0x0000000104033f64 cfunction_call + 72
+19  Python                              0x0000000103fcc074 _PyObject_Call + 116
+20  Python                              0x00000001040fcc3c _PyEval_EvalFrameDefault + 16204
+21  Python                              0x00000001040f87a4 PyEval_EvalCode + 248
+22  Python                              0x00000001040f3674 builtin_exec + 376
+23  Python                              0x0000000103fcbf48 PyObject_Vectorcall + 88
+24  Python                              0x00000001040fb764 _PyEval_EvalFrameDefault + 10868
+25  Python                              0x00000001040f8998 _PyEval_Vector + 264
+26  gem5.opt                            0x000000010018fbb0 _ZNK8pybind116detail10object_apiINS0_8accessorINS0_17accessor_policies8str_attrEEEEclILNS_19return_value_policyE1EJEEENS_6objectEDpOT0_ + 68
+27  gem5.opt                            0x0000000100da0b00 main + 300
+28  dyld                                0x0000000189a43da4 start + 6992
+--- END LIBC BACKTRACE ---
+For more info on how to address this issue, please visit https://www.gem5.org/documentation/general_docs/common-errors/ 
+

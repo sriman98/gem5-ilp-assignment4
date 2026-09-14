@@ -1,0 +1,14 @@
+Assertion failed: (numInstsInROB != numEntries), function insertInst, file rob.cc, line 201.
+Program aborted at tick 1092000
+0   gem5.opt                            0x00000001011369b4 _ZN4gem515print_backtraceEv + 44
+1   gem5.opt                            0x000000010114a440 _ZN4gem512abortHandlerEi + 132
+6   gem5.opt                            0x000000010172b7c8 _ZN4gem52o33ROB10insertInstERKNS_14RefCountingPtrINS0_7DynInstEEE.cold.3 + 0
+7   gem5.opt                            0x00000001007fb700 _ZN4gem52o33ROB10insertInstERKNS_14RefCountingPtrINS0_7DynInstEEE + 444
+8   gem5.opt                            0x000000010077eb98 _ZN4gem52o36Commit8getInstsEv + 372
+9   gem5.opt                            0x000000010077d72c _ZN4gem52o36Commit6commitEv + 2372
+10  gem5.opt                            0x000000010077ca1c _ZN4gem52o36Commit4tickEv + 424
+11  gem5.opt                            0x0000000100786514 _ZN4gem52o33CPU4tickEv + 160
+12  gem5.opt                            0x0000000101142e10 _ZN4gem510EventQueue10serviceOneEv + 244
+13  gem5.opt                            0x000000010115d5b0 _ZN4gem59doSimLoopEPNS_10EventQueueE + 320
+14  gem5.opt                            0x000000010115cee0 _ZN4gem58simulateEy + 376
+15  gem5.opt                            0x000000010054fb94 _ZZN8pybind1112cpp_function10initializeIRPFPN4gem522GlobalSimLoopExitEventEyES4_J

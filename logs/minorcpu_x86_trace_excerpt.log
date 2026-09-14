@@ -1,0 +1,40 @@
+1000000000: system.cpu.execute: Attempting to issue [tid:0]
+1000000000: system.cpu.execute: Discarding inst: 0/28.1/81/505.3996755 pc: 0x1005562 (panic) as its stream state was unexpected, expected: 29
+1000000000: system.cpu.execute: MinorInst: id=0/28.1/81/505.3996755 addr=0x1005562 inst="(invalid)" class=No_OpClass flags="IsInteger IsFloating IsVector IsVectorElem IsM
+1000000000: system.cpu.execute: Stepping to next inst inputIndex: 1
+1000000000: system.cpu.execute: Discarding inst: 0/28.1/81/505.3996756 pc: 0x1005562 (panic) as its stream state was unexpected, expected: 29
+1000000000: system.cpu.execute: MinorInst: id=0/28.1/81/505.3996756 addr=0x1005562 inst="(invalid)" class=No_OpClass flags="IsInteger IsFloating IsVector IsVectorElem IsM
+1000000000: system.cpu.execute: Stepping to next inst inputIndex: 2
+1000000000: system.cpu.execute: Wrapping
+1000000500: system.cpu.execute: Attempting to issue [tid:0]
+1000000500: system.cpu.execute: Discarding inst: 0/28.1/81/505.3996757 pc: 0x1005562 (panic) as its stream state was unexpected, expected: 29
+1000000500: system.cpu.execute: MinorInst: id=0/28.1/81/505.3996757 addr=0x1005562 inst="(invalid)" class=No_OpClass flags="IsInteger IsFloating IsVector IsVectorElem IsM
+1000000500: system.cpu.execute: Stepping to next inst inputIndex: 1
+1000000500: system.cpu.execute: Discarding inst: 0/28.1/81/505.3996758 pc: 0x1005562 (panic) as its stream state was unexpected, expected: 29
+1000000500: system.cpu.execute: MinorInst: id=0/28.1/81/505.3996758 addr=0x1005562 inst="(invalid)" class=No_OpClass flags="IsInteger IsFloating IsVector IsVectorElem IsM
+1000000500: system.cpu.execute: Stepping to next inst inputIndex: 2
+1000000500: system.cpu.execute: Wrapping
+1000001000: system.cpu.execute: Attempting to issue [tid:0]
+1000001000: system.cpu.execute: Discarding inst: 0/28.1/81/505.3996759 pc: 0x1005562 (panic) as its stream state was unexpected, expected: 29
+1000001000: system.cpu.execute: MinorInst: id=0/28.1/81/505.3996759 addr=0x1005562 inst="(invalid)" class=No_OpClass flags="IsInteger IsFloating IsVector IsVectorElem IsM
+1000001000: system.cpu.execute: Stepping to next inst inputIndex: 1
+1000001000: system.cpu.execute: Discarding inst: 0/28.1/81/505.3996760 pc: 0x1005562 (panic) as its stream state was unexpected, expected: 29
+1000001000: system.cpu.execute: MinorInst: id=0/28.1/81/505.3996760 addr=0x1005562 inst="(invalid)" class=No_OpClass flags="IsInteger IsFloating IsVector IsVectorElem IsM
+1000001000: system.cpu.execute: Stepping to next inst inputIndex: 2
+1000001000: system.cpu.execute: Wrapping
+1000001500: system.cpu.execute: Attempting to issue [tid:0]
+1000001500: system.cpu.execute: Discarding inst: 0/28.1/81/505.3996761 pc: 0x1005562 (panic) as its stream state was unexpected, expected: 29
+1000001500: system.cpu.execute: MinorInst: id=0/28.1/81/505.3996761 addr=0x1005562 inst="(invalid)" class=No_OpClass flags="IsInteger IsFloating IsVector IsVectorElem IsM
+1000001500: system.cpu.execute: Stepping to next inst inputIndex: 1
+1000001500: system.cpu.execute: Discarding inst: 0/28.1/81/505.3996762 pc: 0x1005562 (panic) as its stream state was unexpected, expected: 29
+1000001500: system.cpu.execute: MinorInst: id=0/28.1/81/505.3996762 addr=0x1005562 inst="(invalid)" class=No_OpClass flags="IsInteger IsFloating IsVector IsVectorElem IsM
+1000001500: system.cpu.execute: Stepping to next inst inputIndex: 2
+1000001500: system.cpu.execute: Wrapping
+1000002000: system.cpu.execute: Attempting to issue [tid:0]
+1000002000: system.cpu.execute: Discarding inst: 0/28.1/81/505.3996763 pc: 0x1005562 (panic) as its stream state was unexpected, expected: 29
+1000002000: system.cpu.execute: MinorInst: id=0/28.1/81/505.3996763 addr=0x1005562 inst="(invalid)" class=No_OpClass flags="IsInteger IsFloating IsVector IsVectorElem IsM
+1000002000: system.cpu.execute: Stepping to next inst inputIndex: 1
+1000002000: system.cpu.execute: Discarding inst: 0/28.1/81/505.3996764 pc: 0x1005562 (panic) as its stream state was unexpected, expected: 29
+1000002000: system.cpu.execute: MinorInst: id=0/28.1/81/505.3996764 addr=0x1005562 inst="(invalid)" class=No_OpClass flags="IsInteger IsFloating IsVector IsVectorElem IsM
+1000002000: system.cpu.execute: Stepping to next inst inputIndex: 2
+1000002000: system.cpu.execute: Wrapping
