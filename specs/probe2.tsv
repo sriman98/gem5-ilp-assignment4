@@ -1,0 +1,5 @@
+# name	gem5-options	config-arguments
+smt2btb2_int_alu+int_alu	NONE	--cpu o3 --width 4 --maxinsts 3000000 --btb-assoc 2 --cmd bin/int_alu:50000 --cmd bin/int_alu:50000
+smt2btb2_dep_chain+dep_chain	NONE	--cpu o3 --width 4 --maxinsts 3000000 --btb-assoc 2 --cmd bin/dep_chain:500000 --cmd bin/dep_chain:500000
+smt2btb2_bsort+bsort	NONE	--cpu o3 --width 4 --maxinsts 2500000 --btb-assoc 2 --cmd bin/bsort:800 --cmd bin/bsort:800
+smt2_bsort+bsort	NONE	--cpu o3 --width 4 --maxinsts 2500000 --cmd bin/bsort:800 --cmd bin/bsort:800

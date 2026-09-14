@@ -1,0 +1,7 @@
+# name	gem5-options	config-arguments
+smt2dyn_int_alu+dep_chain	NONE	--cpu o3 --width 4 --maxinsts 3000000 --smt-share Dynamic --cmd bin/int_alu:50000 --cmd bin/dep_chain:500000
+smt2dyn_fp_matmul+int_alu	NONE	--cpu o3 --width 4 --maxinsts 3000000 --smt-share Dynamic --cmd bin/fp_matmul:4 --cmd bin/int_alu:50000
+smt2dyn_bsort+branchy	NONE	--cpu o3 --width 4 --maxinsts 3000000 --smt-share Dynamic --cmd bin/bsort:800 --cmd bin/branchy:20
+smt2dyn_fp_matmul+mem_chase	NONE	--cpu o3 --width 4 --maxinsts 3000000 --smt-share Dynamic --cmd bin/fp_matmul:4 --cmd bin/mem_chase:300000
+smt2dyn_mem_stream+mem_chase	NONE	--cpu o3 --width 4 --maxinsts 3000000 --smt-share Dynamic --cmd bin/mem_stream:2 --cmd bin/mem_chase:300000
+smt4dyn_int_alu+dep_chain+mem_chase+branchy	NONE	--cpu o3 --width 4 --maxinsts 3000000 --smt-share Dynamic --cmd bin/int_alu:50000 --cmd bin/dep_chain:500000 --cmd bin/mem_chase:300000 --cmd bin/branchy:20

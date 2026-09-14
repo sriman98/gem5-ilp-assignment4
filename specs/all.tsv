@@ -1,0 +1,61 @@
+# name	gem5-options	config-arguments
+ss_w1_int_alu	NONE	--cpu o3 --width 1 --bp tournament --cmd bin/int_alu:50000
+ss_w2_int_alu	NONE	--cpu o3 --width 2 --bp tournament --cmd bin/int_alu:50000
+ss_w4_int_alu	NONE	--cpu o3 --width 4 --bp tournament --cmd bin/int_alu:50000
+ss_w8_int_alu	NONE	--cpu o3 --width 8 --bp tournament --cmd bin/int_alu:50000
+ss_w1_dep_chain	NONE	--cpu o3 --width 1 --bp tournament --cmd bin/dep_chain:500000
+ss_w2_dep_chain	NONE	--cpu o3 --width 2 --bp tournament --cmd bin/dep_chain:500000
+ss_w4_dep_chain	NONE	--cpu o3 --width 4 --bp tournament --cmd bin/dep_chain:500000
+ss_w8_dep_chain	NONE	--cpu o3 --width 8 --bp tournament --cmd bin/dep_chain:500000
+ss_w1_mem_stream	NONE	--cpu o3 --width 1 --bp tournament --cmd bin/mem_stream:2
+ss_w2_mem_stream	NONE	--cpu o3 --width 2 --bp tournament --cmd bin/mem_stream:2
+ss_w4_mem_stream	NONE	--cpu o3 --width 4 --bp tournament --cmd bin/mem_stream:2
+ss_w8_mem_stream	NONE	--cpu o3 --width 8 --bp tournament --cmd bin/mem_stream:2
+ss_w1_mem_chase	NONE	--cpu o3 --width 1 --bp tournament --cmd bin/mem_chase:300000
+ss_w2_mem_chase	NONE	--cpu o3 --width 2 --bp tournament --cmd bin/mem_chase:300000
+ss_w4_mem_chase	NONE	--cpu o3 --width 4 --bp tournament --cmd bin/mem_chase:300000
+ss_w8_mem_chase	NONE	--cpu o3 --width 8 --bp tournament --cmd bin/mem_chase:300000
+ss_w1_branchy	NONE	--cpu o3 --width 1 --bp tournament --cmd bin/branchy:20
+ss_w2_branchy	NONE	--cpu o3 --width 2 --bp tournament --cmd bin/branchy:20
+ss_w4_branchy	NONE	--cpu o3 --width 4 --bp tournament --cmd bin/branchy:20
+ss_w8_branchy	NONE	--cpu o3 --width 8 --bp tournament --cmd bin/branchy:20
+ss_w1_bsort	NONE	--cpu o3 --width 1 --bp tournament --cmd bin/bsort:800
+ss_w2_bsort	NONE	--cpu o3 --width 2 --bp tournament --cmd bin/bsort:800
+ss_w4_bsort	NONE	--cpu o3 --width 4 --bp tournament --cmd bin/bsort:800
+ss_w8_bsort	NONE	--cpu o3 --width 8 --bp tournament --cmd bin/bsort:800
+bp_static-nt_w4_branchy	NONE	--cpu o3 --width 4 --bp static-nt --cmd bin/branchy:20
+bp_static-t_w4_branchy	NONE	--cpu o3 --width 4 --bp static-t --cmd bin/branchy:20
+bp_local_w4_branchy	NONE	--cpu o3 --width 4 --bp local --cmd bin/branchy:20
+bp_tournament_w4_branchy	NONE	--cpu o3 --width 4 --bp tournament --cmd bin/branchy:20
+bp_tage_w4_branchy	NONE	--cpu o3 --width 4 --bp tage --cmd bin/branchy:20
+bp_static-nt_w1_branchy	NONE	--cpu o3 --width 1 --bp static-nt --cmd bin/branchy:20
+bp_tournament_w1_branchy	NONE	--cpu o3 --width 1 --bp tournament --cmd bin/branchy:20
+bp_static-nt_w4_bsort	NONE	--cpu o3 --width 4 --bp static-nt --cmd bin/bsort:800
+bp_static-t_w4_bsort	NONE	--cpu o3 --width 4 --bp static-t --cmd bin/bsort:800
+bp_local_w4_bsort	NONE	--cpu o3 --width 4 --bp local --cmd bin/bsort:800
+bp_tournament_w4_bsort	NONE	--cpu o3 --width 4 --bp tournament --cmd bin/bsort:800
+bp_tage_w4_bsort	NONE	--cpu o3 --width 4 --bp tage --cmd bin/bsort:800
+bp_static-nt_w1_bsort	NONE	--cpu o3 --width 1 --bp static-nt --cmd bin/bsort:800
+bp_tournament_w1_bsort	NONE	--cpu o3 --width 1 --bp tournament --cmd bin/bsort:800
+bp_static-nt_w4_int_alu	NONE	--cpu o3 --width 4 --bp static-nt --cmd bin/int_alu:50000
+bp_static-t_w4_int_alu	NONE	--cpu o3 --width 4 --bp static-t --cmd bin/int_alu:50000
+bp_local_w4_int_alu	NONE	--cpu o3 --width 4 --bp local --cmd bin/int_alu:50000
+bp_tournament_w4_int_alu	NONE	--cpu o3 --width 4 --bp tournament --cmd bin/int_alu:50000
+bp_tage_w4_int_alu	NONE	--cpu o3 --width 4 --bp tage --cmd bin/int_alu:50000
+bp_static-nt_w1_int_alu	NONE	--cpu o3 --width 1 --bp static-nt --cmd bin/int_alu:50000
+bp_tournament_w1_int_alu	NONE	--cpu o3 --width 1 --bp tournament --cmd bin/int_alu:50000
+smt2_int_alu+mem_chase	NONE	--cpu o3 --width 4 --maxinsts 3000000 --cmd bin/int_alu:50000 --cmd bin/mem_chase:300000
+smt2_int_alu+dep_chain	NONE	--cpu o3 --width 4 --maxinsts 3000000 --cmd bin/int_alu:50000 --cmd bin/dep_chain:500000
+smt2_dep_chain+dep_chain	NONE	--cpu o3 --width 4 --maxinsts 3000000 --cmd bin/dep_chain:500000 --cmd bin/dep_chain:500000
+smt2_bsort+branchy	NONE	--cpu o3 --width 4 --maxinsts 3000000 --cmd bin/bsort:800 --cmd bin/branchy:20
+smt2_mem_stream+mem_chase	NONE	--cpu o3 --width 4 --maxinsts 3000000 --cmd bin/mem_stream:2 --cmd bin/mem_chase:300000
+smt2_int_alu+int_alu	NONE	--cpu o3 --width 4 --maxinsts 3000000 --cmd bin/int_alu:50000 --cmd bin/int_alu:50000
+smt4_int_alu+dep_chain+mem_chase+branchy	NONE	--cpu o3 --width 4 --maxinsts 3000000 --cmd bin/int_alu:50000 --cmd bin/dep_chain:500000 --cmd bin/mem_chase:300000 --cmd bin/branchy:20
+smt2pol_iqcount_int_alu+mem_chase	NONE	--cpu o3 --width 4 --maxinsts 3000000 --smt-fetch IQCount --cmd bin/int_alu:50000 --cmd bin/mem_chase:300000
+smt2pol_dynamic_int_alu+mem_chase	NONE	--cpu o3 --width 4 --maxinsts 3000000 --smt-share Dynamic --cmd bin/int_alu:50000 --cmd bin/mem_chase:300000
+ss_w1_fp_matmul	NONE	--cpu o3 --width 1 --bp tournament --cmd bin/fp_matmul:4
+ss_w2_fp_matmul	NONE	--cpu o3 --width 2 --bp tournament --cmd bin/fp_matmul:4
+ss_w4_fp_matmul	NONE	--cpu o3 --width 4 --bp tournament --cmd bin/fp_matmul:4
+ss_w8_fp_matmul	NONE	--cpu o3 --width 8 --bp tournament --cmd bin/fp_matmul:4
+smt2_fp_matmul+int_alu	NONE	--cpu o3 --width 4 --maxinsts 3000000 --cmd bin/fp_matmul:4 --cmd bin/int_alu:50000
+smt2_fp_matmul+mem_chase	NONE	--cpu o3 --width 4 --maxinsts 3000000 --cmd bin/fp_matmul:4 --cmd bin/mem_chase:300000
